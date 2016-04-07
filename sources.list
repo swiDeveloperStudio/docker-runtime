@@ -1,4 +1,0 @@
-deb http://fr.archive.ubuntu.com/ubuntu trusty main universe
-deb http://fr.archive.ubuntu.com/ubuntu trusty-security main universe
-deb http://fr.archive.ubuntu.com/ubuntu trusty-updates main universe
-#deb http://fr.archive.ubuntu.com/ubuntu trusty-backports main universe

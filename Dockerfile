@@ -1,18 +1,8 @@
-FROM ubuntu:trusty
+FROM debian:jessie
 
-## UTF8 support
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
 
 ## Prereq
-ADD sources.list /etc/apt/
-RUN apt-get -q update
-RUN apt-get -q -y install \
-	build-essential python-jinja2 inetutils-ping \
-	vim git-core ninja-build \
-	&& apt-get clean
+RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends make python-jinja2 ninja-build bzip2 && apt-get clean
 
 ## DS specific
 ENV LEGATO_ROOT /legato
@@ -25,7 +15,5 @@ ADD legatoenv /legatoenv
 RUN echo "source /legatoenv" >> /etc/bash.bashrc 
 ENV BASH_ENV /legatoenv
 
-#ENTRYPOINT  ["/bin/bash"]
-#CMD         ["-l"]
 WORKDIR     /
 
