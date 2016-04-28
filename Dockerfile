@@ -2,7 +2,7 @@ FROM debian:jessie
 
 
 ## Prereq
-RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends make python-jinja2 ninja-build bzip2 && apt-get clean
+RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends make python-jinja2 ninja-build bzip2 rsync && apt-get clean
 
 ## DS specific
 ENV LEGATO_ROOT /legato
