@@ -2,7 +2,12 @@ FROM debian:jessie
 
 
 ## Prereq
-RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends make python-jinja2 ninja-build bzip2 rsync && apt-get clean
+RUN echo "deb http://ftp.debian.org/debian/ jessie main" > /etc/apt/sources.list
+RUN echo "deb http://ftp.debian.org/debian/ jessie-backports main" >> /etc/apt/sources.list
+
+RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends \
+			make python-jinja2 ninja-build bzip2 rsync openjdk-8-jdk \ 
+			&& apt-get clean
 
 ## DS specific
 ENV LEGATO_ROOT /legato
@@ -15,5 +20,5 @@ ADD legatoenv /legatoenv
 RUN echo "source /legatoenv" >> /etc/bash.bashrc 
 ENV BASH_ENV /legatoenv
 
-WORKDIR     /
+WORKDIR /
 
