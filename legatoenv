@@ -1,6 +1,5 @@
 if test -n "$TOOLCHAIN_PROFILES" -a -d "$TOOLCHAIN_PROFILES"; then
 	for FILE in $(ls "$TOOLCHAIN_PROFILES"); do 
-		echo "Loading legato env: $TOOLCHAIN_PROFILES/$FILE"; 
 		source "$TOOLCHAIN_PROFILES/$FILE"; 
 	done
 fi
