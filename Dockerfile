@@ -6,7 +6,7 @@ RUN echo "deb http://ftp.debian.org/debian/ jessie main" > /etc/apt/sources.list
 RUN echo "deb http://ftp.debian.org/debian/ jessie-backports main" >> /etc/apt/sources.list
 
 RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends \
-			make python-jinja2 ninja-build bzip2 rsync openjdk-8-jdk zip vim ssh \ 
+			make python-jinja2 ninja-build bzip2 rsync openjdk-8-jdk zip vim ssh git-core \ 
 			&& apt-get clean
 
 ## DS specific
