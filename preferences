@@ -1,0 +1,25 @@
+Package: *
+Pin: release o=apt-build
+Pin-Priority: 900
+
+
+; ftp.fr.debian.org_debian_dists_jessie-backports_InRelease
+Package: *
+Pin: release a=jessie-backports, n=jessie-backports, o=Debian Backports, l=Debian Backports
+Pin-Priority: 800
+
+; ftp.fr.debian.org_debian_dists_jessie_Release
+Package: *
+Pin: release a=stable, n=jessie, o=Debian, l=Debian
+Pin-Priority: 800
+
+; ftp.fr.debian.org_debian_dists_jessie-updates_InRelease
+Package: *
+Pin: release a=stable-updates, n=jessie-updates, o=Debian, l=Debian
+Pin-Priority: 800
+
+; security.debian.org_dists_jessie_updates_InRelease
+Package: *
+Pin: release a=stable, n=jessie, o=Debian, l=Debian-Security
+Pin-Priority: 800
+
