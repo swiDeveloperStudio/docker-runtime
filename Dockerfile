@@ -6,7 +6,7 @@ ADD sources.list /etc/apt/
 ADD preferences /etc/apt/
 
 RUN apt-get --quiet update && apt-get --quiet install --yes --no-install-recommends \
-			make python-jinja2 python-pkg-resources ninja-build bzip2 rsync openjdk-8-jdk-headless zip vim ssh git-core autoconf automake \ 
+			make gcc python-jinja2 python-pkg-resources ninja-build bzip2 rsync openjdk-8-jdk-headless zip vim ssh git-core autoconf automake \ 
 			&& apt-get clean
 
 ## DS specific
